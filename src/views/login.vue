@@ -30,8 +30,7 @@ export default {
     var validateName = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入用户名"));
-      }
-      else {
+      } else {
         callback();
       }
     };
@@ -62,7 +61,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          alert("submit!");
+          this.$store.dispatch("login", this.ruleForm);
         } else {
           // console.log('error submit!!');
           return false;
