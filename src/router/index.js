@@ -1,8 +1,10 @@
 import Login from "../views/login.vue"
+import Index from "../views/index.vue"
 import VueRouter from "vue-router"
 import {getToken} from "../utils/auth"
 const routes = [
-    { path: '/login', component: Login }
+    { path: '/login', component: Login },
+    { path: '/', component: Index }
 
 ]
 const router = new VueRouter({routes})
