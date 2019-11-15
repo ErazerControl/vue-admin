@@ -61,7 +61,13 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          this.$store.dispatch("login", this.ruleForm);
+          this.$store.dispatch("login", this.ruleForm)
+          .then(()=> {
+            this.$router.push('/')
+          })
+          .catch(error => {
+            console.log(error)
+          })
         } else {
           // console.log('error submit!!');
           return false;
