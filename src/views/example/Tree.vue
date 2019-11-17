@@ -1,9 +1,10 @@
 <template>
-    <router-view>
-      </router-view>  
+  <div>
+  这是tree页面
+  </div>
 </template>
 <script>
 export default {
-  name: 'appMain'
+  name: 'Tree'
 }
 </script>

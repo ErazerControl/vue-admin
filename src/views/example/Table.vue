@@ -1,9 +1,10 @@
 <template>
-    <router-view>
-      </router-view>  
+  <div>
+  这是table页面
+  </div>
 </template>
 <script>
 export default {
-  name: 'appMain'
+  name: 'Table'
 }
 </script>

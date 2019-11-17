@@ -9,7 +9,7 @@
       text-color="#fff"
       active-text-color="#ffd04b"
     >
-    <sidebar-item v-for="(item) in items" :index="item.title" :key="item.title" :item="item"></sidebar-item>
+    <sidebar-item v-for="(item) in items" :index="item.title" :key="item.title" :item="item" :basePath = "item.path"></sidebar-item>
     </el-menu>
   </el-row>
 </template>
