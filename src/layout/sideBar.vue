@@ -1,5 +1,4 @@
 <template>
-  <el-row class="tac">
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
@@ -11,7 +10,6 @@
     >
     <sidebar-item v-for="(item) in items" :index="item.title" :key="item.title" :item="item" basePath = ""></sidebar-item>
     </el-menu>
-  </el-row>
 </template>
 <script>
 import SidebarItem from "./components/sideBarItem";

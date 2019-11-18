@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <div class="left">
-  <side-bar></side-bar>
-    </div>
-  <div class="right">
-    <nav-bar class="nav" :breadList=breadList></nav-bar>
+    <el-row>
+      <el-col :span="4" class="left">
+       <side-bar></side-bar>
+       </el-col>
+       <el-col :span="20">
+    <nav-bar class="nav" :breadList=breadList ></nav-bar>
     <app-main></app-main>
-  </div>
-  </div>
+       </el-col>
+    </el-row>
 </template>
 <script>
 import {sideBar,navBar,appMain} from "./index.js";
@@ -23,17 +23,16 @@ export default {
 }
 </script>
 <style>
-.left {
-  width: 250px;
-  float: left;
-  height: 2000px;
-  background-color: rgb(84, 92, 100);
-}
-.right {
-  float: left;
-  width: calc(100% - 250px);
-}
 .nav {
   padding: 1rem 3rem;
+}
+.el-menu {
+  height: 100%;
+}
+.el-row {
+  height: 100%;
+}
+.left {
+  height: 100%;
 }
 </style>
