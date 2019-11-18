@@ -9,7 +9,7 @@
       text-color="#fff"
       active-text-color="#ffd04b"
     >
-    <sidebar-item v-for="(item) in items" :index="item.title" :key="item.title" :item="item" :basePath = "item.path"></sidebar-item>
+    <sidebar-item v-for="(item) in items" :index="item.title" :key="item.title" :item="item" basePath = ""></sidebar-item>
     </el-menu>
   </el-row>
 </template>
@@ -24,38 +24,48 @@ export default {
     return {
       items: [
         {
-          title: "Dashboard"
+          title: "Dashboard",
+          path: '/dashboard'
         },
         {
           title: "Example",
+          path: '/example',
           children: [
             {
-              title: "Table"
+              title: "Table",
+              path: '/table'
             },
             {
-              title: "Tree"
+              title: "Tree",
+              path: '/tree'
             }
           ]
         },
         {
-          title: "Form"
+          title: "Form",
+          path: '/form'
         },
         {
           title:'Nested',
+          path: '/menu',
           children : [
             {
               title:'Menu1',
+              path: '/menu1',
               children: [
             {
-              title: "Menu1-1"
+              title: "Menu1-1",
+              path: '/menu1-1',
             },
             {
-              title: "Menu1-2"
+              title: "Menu1-2",
+              path: '/menu1-2',
             }
           ]
             },
             {
               title:'Menu2',
+              path: '/menu2',
             }
           ]
         }

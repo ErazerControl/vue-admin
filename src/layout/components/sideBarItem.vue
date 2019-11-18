@@ -1,9 +1,9 @@
 <template>
   <div>
-    <router-link v-if="!item.children" :to="item.title" >
+    <router-link v-if="!item.children" :to="getLink" >
       <el-menu-item >
         <!-- <i class="el-icon-setting"></i> -->
-        <span slot="title" :to="getLink">{{item.title}}</span>
+        <span slot="title">{{item.title}}</span>
       </el-menu-item>
     </router-link>
 
@@ -30,7 +30,7 @@ export default {
   },
   computed:{
     getLink: function () {
-      return this.getBasePath + this.item.path
+      return this.basePath + this.item.path
     },
     getBasePath: function() {
       return this.basePath + this.item.path
