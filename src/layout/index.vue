@@ -5,7 +5,7 @@
        </el-col>
        <el-col :span="20">
     <nav-bar class="nav" :breadList=breadList ></nav-bar>
-    <app-main></app-main>
+    <app-main class="main"></app-main>
        </el-col>
     </el-row>
 </template>
@@ -34,5 +34,8 @@ export default {
 }
 .left {
   height: 100%;
+}
+.main {
+  padding: 30px;
 }
 </style>
